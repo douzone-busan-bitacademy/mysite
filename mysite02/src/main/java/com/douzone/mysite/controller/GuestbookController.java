@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.douzone.mvc.Action;
-import com.douzone.mysite.mvc.main.MainActionFactory;
+import com.douzone.mysite.mvc.guestbook.GuestbookActionFactory;
 
 public class GuestbookController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
