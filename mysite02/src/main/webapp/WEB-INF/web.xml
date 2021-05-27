@@ -17,7 +17,7 @@
 	</servlet>
 	<servlet>
 		<servlet-name>GuestbookController</servlet-name>
-		<servlet-class>com.douzone.mysite.controlle.GuestbookController
+		<servlet-class>com.douzone.mysite.controller.GuestbookController
 		</servlet-class>
 	</servlet>
 
