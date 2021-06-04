@@ -10,6 +10,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
+import com.douzone.mysite.exception.GuestbookRepositoryException;
 import com.douzone.mysite.vo.GuestbookVo;
 
 @Repository
@@ -25,7 +26,7 @@ public class GuestbookRepository {
 			conn = getConnection();
 			
 			String sql =
-				"   select no, name, date_format(reg_date, '%Y/%m/%d %H:%i:%s') as reg_date, message" +
+				"   selec no, name, date_format(reg_date, '%Y/%m/%d %H:%i:%s') as reg_date, message" +
 				"     from guestbook" +
 				" order by reg_date desc";
 			pstmt = conn.prepareStatement(sql);
@@ -48,7 +49,7 @@ public class GuestbookRepository {
 			}
 			
 		} catch (SQLException e) {
-			System.out.println("error:" + e);
+			throw new GuestbookRepositoryException(e.getMessage());
 		} finally {
 			try {
 				if(rs != null) {
@@ -61,7 +62,7 @@ public class GuestbookRepository {
 					conn.close();
 				}
 			} catch (SQLException e) {
-				e.printStackTrace();
+				throw new GuestbookRepositoryException(e.getMessage());
 			}
 		}
 		
