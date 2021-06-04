@@ -45,9 +45,8 @@ public class GuestbookController {
 		return "redirect:/guestbook";
 	}
 	
-	@ExceptionHandler(Exception.class)
-	public String handlerEception() {
-		// 1. logging
-		return "error/exception"; //2. 사과 페이지 이동...
-	}
+//	@ExceptionHandler(Exception.class)
+//	public String handlerEception() {
+//		return "error/exception";
+//	}
 }

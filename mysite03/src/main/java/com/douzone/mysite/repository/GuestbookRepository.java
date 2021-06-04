@@ -26,7 +26,7 @@ public class GuestbookRepository {
 			conn = getConnection();
 			
 			String sql =
-				"   selec no, name, date_format(reg_date, '%Y/%m/%d %H:%i:%s') as reg_date, message" +
+				"   select no, name, date_format(reg_date, '%Y/%m/%d %H:%i:%s') as reg_date, message" +
 				"     from guestbook" +
 				" order by reg_date desc";
 			pstmt = conn.prepareStatement(sql);
