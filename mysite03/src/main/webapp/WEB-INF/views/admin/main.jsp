@@ -24,7 +24,7 @@
 
 						<label class="block-label">프로필 이미지</label>
 						<img id="profile" src="${pageContext.request.contextPath }/${vo.profile }" style="width:120px">
-						<input type="file" name="file1">
+						<input type="file" name="file">
 
 						<label class="block-label">사이트 설명</label>
 						<textarea name="description">${vo.description }</textarea>
