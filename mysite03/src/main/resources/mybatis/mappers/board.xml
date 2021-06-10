@@ -110,7 +110,7 @@
 				  	from board a, user b
 				   where a.user_no = b.no
 				     and (title like '%${keyword }%' or contents like '%${keyword }%')
-				order by group_no desc, oorder_no asc
+				order by group_no desc, order_no asc
 				   limit #{startIndex }, #{size }				
 				]]>			
 			</otherwise>
