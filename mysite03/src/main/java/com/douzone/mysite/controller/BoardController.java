@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.douzone.mysite.service.BoardService;
 import com.douzone.mysite.vo.BoardVo;
 import com.douzone.mysite.vo.UserVo;
-import com.douzone.security.Auth;
-import com.douzone.security.AuthUser;
+import com.douzone.mysite.security.Auth;
+import com.douzone.mysite.security.AuthUser;
 import com.douzone.web.util.WebUtil;
 
 @Controller
