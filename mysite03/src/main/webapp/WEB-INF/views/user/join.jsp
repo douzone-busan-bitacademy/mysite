@@ -22,6 +22,9 @@ $(function(){
 			url: "/mysite03/user/api/checkemail?email=" + email,
 			type: "get",
 			dataType: "json",
+			error: function(xhr, status, e){
+				console.error(status, e);
+			},
 			success: function(response){
 				if(response.result != "success"){
 					console.log("error");
