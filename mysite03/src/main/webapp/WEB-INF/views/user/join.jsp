@@ -14,7 +14,14 @@
 $(function(){
 	btn = $('#btn-check');
 	btn.click(function(){
-		console.log(".....");
+		$.ajax({
+			url: "/mysite03/user/api/checkemail?email=kickscar@gmail.com",
+			type: "get",
+			dataType: "json",
+			success: function(response){
+				console.log(response);
+			}
+		});
 	});
 });
 
