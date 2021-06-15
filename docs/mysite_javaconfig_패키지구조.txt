@@ -8,9 +8,9 @@
           |                      |      |     |--- DBConfig.java
           |                      |      |     |--- MyBatisConfig.java
           |                      |      |--- web
-          |                      |      |     |--- MvcConfig.java
+          |                      |      |     |--- MvcConfig.java [o]
           |                      |      |     |--- SecurityConfig.java
-          |                      |      |     |--- MessageSourceConfig.java
+          |                      |      |     |--- MessageConfig.java [o]
           |                      |      |     |--- FileuploadConfig.java
           |                      |--- mysite
           |                             |--- controller
@@ -41,3 +41,23 @@
 
 
 
+src/main/java
+com.douzone.config.app
+com.douzone.config.web     [o] 
+com.douzone.mysite.config  [o]
+
+src/main/resources
+com.douzone.mysite.config.app
+com.douzone.mysite.config.app.mybatis
+com.douzone.mysite.config.app.mybatis.mappers
+com.douzone.mysite.config.web [o]
+
+Board {
+ Date regDate;
+	 
+}
+
+{
+	name: "",
+	regDate: ""
+}
