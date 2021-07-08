@@ -17,7 +17,7 @@ public class GuestbookService {
 			return guestbookRepository.findAll();
 	}
 	
-	public List<GuestbookVo> getMessageList(Long no/*기준*/) {
+	public List<GuestbookVo> getMessageList(Long no) {
 		return guestbookRepository.findAll(no);
 	}
 	
@@ -29,8 +29,7 @@ public class GuestbookService {
 		return guestbookRepository.delete(vo);
 	}
 
-	public void addMessage(GuestbookVo vo) {
-		guestbookRepository.insert(vo);
+	public boolean addMessage(GuestbookVo vo) {
+		return guestbookRepository.insert(vo);
 	}
-	
 }
