@@ -11,6 +11,5 @@ import com.douzone.mysite.service.GuestbookService;
 public class GuestbookController {
 	@Autowired
 	private GuestbookService guestbookService;
-
 	
 }
