@@ -20,7 +20,6 @@ var isEnd = false;
 var listItemTemplate = new EJS({
 	url: "${pageContext.request.contextPath }/assets/js/ejs/list-item-template.ejs"
 });
-
 var listTemplate = new EJS({
 	url: "${pageContext.request.contextPath }/assets/js/ejs/list-template.ejs"
 });
@@ -135,7 +134,7 @@ $(function(){
 		vo.name = $("#input-name").val();
 		if(vo.name == ''){
 			messageBox("방명록 글 남기기", "이름은 필수 항목 입니다.", function(){
-						$("#input-name").focus();
+				$("#input-name").focus();
 			});
 			return;
 		}
